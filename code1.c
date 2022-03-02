@@ -15,11 +15,10 @@
 int	ft_isalnum(int c)
 {
 	int ch = c;
-	if (ch >= 'A' && ch <= 'Z')
+	if ((ch >= '0' && ch <= '9') || (ch >= 'a' && ch <= 'z')
+	    || (ch >= 'A' && ch <= 'Z'))
+	{
 		return (1);
-	if (ch >= 'a' && ch <= 'z')
-		return (1);
-	if (ch >= '0' && ch <= '9')
-		return (1);
+	}
 	return (0);
 }
